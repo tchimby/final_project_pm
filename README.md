@@ -32,20 +32,20 @@ Per `memory/MEMORY.md`:
 
 The `.jsonl` files are Claude Code conversation logs (one per session). They mirror what was in the Drive backup folder `C--Users-DELL-Desktop-final-project-pm/`.
 
-| Session UUID | Captured |
-|---|---|
-| `54a2e222-5f04-45ef-a980-51122cf60aec` | ✅ in this repo |
-| `82b35adf-ec8c-490f-bd57-ecd56d661791` | ⏳ pending (Drive re-auth) |
-| `8904d4c0-2a82-41b1-bcc5-1d3681586b04` | ⏳ pending |
-| `a3cc2242-2dcb-4914-8fc8-56d2c24da44d` | ⏳ pending |
-| `ad816e15-cf2d-4771-a20b-fe09d0682830` | ⏳ pending |
-| `f711f97d-b896-4af0-bc40-0e99d1e82783` | ⏳ pending |
-| `dff23c01-7b44-4b73-95f7-5b5950dec4dc` | ⏳ pending |
-| `3b5c2738-e504-4a37-8abd-dfc9df035a4e` | ⏳ pending |
-| `736ddf85-9ea3-46da-a6c1-f6e246c56c60` | ⏳ pending |
-| `d6ebdcc9-c84d-419a-b92d-0c3f20d9b73e` | ⏳ pending |
+| Session UUID | Size | Captured |
+|---|---:|---|
+| `3b5c2738-e504-4a37-8abd-dfc9df035a4e` | 471 KB | ✅ |
+| `54a2e222-5f04-45ef-a980-51122cf60aec` | 405 KB | ✅ |
+| `736ddf85-9ea3-46da-a6c1-f6e246c56c60` | 454 KB | ✅ |
+| `ad816e15-cf2d-4771-a20b-fe09d0682830` | 3.60 MB | ✅ |
+| `d6ebdcc9-c84d-419a-b92d-0c3f20d9b73e` | 429 KB | ✅ |
+| `dff23c01-7b44-4b73-95f7-5b5950dec4dc` | 1.76 MB | ✅ |
+| `f711f97d-b896-4af0-bc40-0e99d1e82783` | 3.48 MB | ✅ |
+| `8904d4c0-2a82-41b1-bcc5-1d3681586b04` | 7.31 MB | ⏳ pending |
+| `a3cc2242-2dcb-4914-8fc8-56d2c24da44d` | 8.88 MB | ⏳ pending |
+| `82b35adf-ec8c-490f-bd57-ecd56d661791` | 9.45 MB | ⏳ pending |
 
-The pending transcripts are in the Drive folder `12FskG0hzNXpHiaZqe2ubuQ2wfdRtL99z` (`C--Users-DELL-Desktop-final-project-pm`). After re-authing the Google Drive connector in Claude Code, re-run the download for those 9 file IDs.
+The 3 pending files exceed the MCP `download_file_content` size limit (~5 MB per call) and the tool consistently returns "session expired" for them. To recover them: open the Drive folder ([C--Users-DELL-Desktop-final-project-pm](https://drive.google.com/drive/folders/12FskG0hzNXpHiaZqe2ubuQ2wfdRtL99z)), download the 3 files manually via the browser, drop them into this directory, and commit.
 
 ## Relationship to the kalshi project
 
